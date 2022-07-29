@@ -11887,9 +11887,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3175148857797698349, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0776327
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175148857797698349, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: m_Center.y
+      value: 0.038816333
+      objectReference: {fileID: 0}
     - target: {fileID: 4249599625100672712, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_Name
       value: ScoreCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249599625100672712, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: m_TagString
+      value: CollisionScore
       objectReference: {fileID: 0}
     - target: {fileID: 7950869882348598183, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_Camera
