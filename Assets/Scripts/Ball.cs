@@ -6,16 +6,20 @@ public class Ball : MonoBehaviour
 {
     private Rigidbody ballRb;
     private Renderer ballRenderer;
+    [SerializeField] ParticleSystem ballParticles;
     // Start is called before the first frame update
     void Start()
     {
+        Color randomColor = RandomColourVector3();
         float scaleBall = Random.Range(.2f, .35f);
         transform.localScale = new Vector3(scaleBall, scaleBall, scaleBall);
         ballRb = GetComponent<Rigidbody>();
         ballRenderer = GetComponent<Renderer>();
 
-        ballRenderer.material.color = RandomColourVector3();
+        ballRenderer.material.color = randomColor;
         ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);
+        var main = ballParticles.main;
+        main.startColor = randomColor;
     }
 
     // Update is called once per frame
@@ -51,5 +55,10 @@ public class Ball : MonoBehaviour
         {
             other.GetComponent<ScoreCollider>().scoreUpdate(-1);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Instantiate(ballParticles, transform.position, transform.rotation);
     }
 }
