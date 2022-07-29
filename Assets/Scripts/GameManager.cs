@@ -42,4 +42,11 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         Debug.Log(score);
     }
+
+
+    // Used by button, to switch scenes to menu
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
