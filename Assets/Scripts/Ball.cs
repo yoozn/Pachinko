@@ -16,14 +16,25 @@ public class Ball : MonoBehaviour
     void Start()
     {
         Color randomColor = RandomColourVector3();
-        float scaleBall = Random.Range(.2f, .35f);
+
+        //scale of ball. un comment below to set to random values.
+
+        //float scaleBall = Random.Range(.2f, .35f);
+        float scaleBall = .25f;
+
+
         transform.localScale = new Vector3(scaleBall, scaleBall, scaleBall);
         ballRb = GetComponent<Rigidbody>();
         ballRenderer = GetComponent<Renderer>();
         audioSource = GetComponent<AudioSource>();
 
         ballRenderer.material.color = randomColor;
-        ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);
+
+
+        //ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);
+        ballRb.AddForce(Vector3.down, ForceMode.Impulse);
+
+
         var main = ballParticles.main;
         main.startColor = randomColor;
     }
