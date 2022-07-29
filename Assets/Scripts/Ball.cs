@@ -7,6 +7,11 @@ public class Ball : MonoBehaviour
     private Rigidbody ballRb;
     private Renderer ballRenderer;
     [SerializeField] ParticleSystem ballParticles;
+    [SerializeField] AudioClip collision1;
+    [SerializeField] AudioClip collision2;
+    [SerializeField] AudioClip score;
+    private AudioSource audioSource;
+    private bool scored = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +20,7 @@ public class Ball : MonoBehaviour
         transform.localScale = new Vector3(scaleBall, scaleBall, scaleBall);
         ballRb = GetComponent<Rigidbody>();
         ballRenderer = GetComponent<Renderer>();
+        audioSource = GetComponent<AudioSource>();
 
         ballRenderer.material.color = randomColor;
         ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);
@@ -45,7 +51,8 @@ public class Ball : MonoBehaviour
         if (other.gameObject.CompareTag("CollisionScore"))
         {
             other.GetComponent<ScoreCollider>().scoreUpdate(1);
-            Debug.Log("Entered");
+            audioSource.PlayOneShot(score);
+            scored = true;
         }
     }
 
@@ -54,11 +61,30 @@ public class Ball : MonoBehaviour
         if (other.gameObject.CompareTag("CollisionScore"))
         {
             other.GetComponent<ScoreCollider>().scoreUpdate(-1);
+            scored = false;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(ballParticles, transform.position, transform.rotation);
+        randomCollisionSound();
+    }
+
+    private void randomCollisionSound()
+    {
+        if (scored == false)
+        {
+            int randomNum = Random.Range(0, 1);
+            if (randomNum == 1)
+            {
+                audioSource.PlayOneShot(collision1);
+            }
+            else
+            {
+                audioSource.PlayOneShot(collision2);
+            }
+        }
+        
     }
 }
