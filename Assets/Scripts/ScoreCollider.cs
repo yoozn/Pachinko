@@ -11,6 +11,8 @@ public class ScoreCollider : MonoBehaviour
     [SerializeField] Vector4 colorValue;
     private GameManager gameManager;
     [SerializeField] ParticleSystem scoreColliderParticle1;
+    [SerializeField] ParticleSystem scoreColliderParticle2;
+
     private Color colourValue;
     // Start is called before the first frame update
     void Start()
@@ -52,5 +54,6 @@ public class ScoreCollider : MonoBehaviour
         var scoreParticles = Instantiate(scoreColliderParticle1, transform.position + new Vector3(0, .75f, 0), scoreColliderParticle1.transform.rotation);
         var scoreParticlesMain = scoreParticles.main;
         scoreParticlesMain.startColor = newColourValue;
+        Instantiate(scoreColliderParticle2, transform.position + new Vector3(0, .75f, 0), scoreColliderParticle2.transform.rotation);
     }    
 }

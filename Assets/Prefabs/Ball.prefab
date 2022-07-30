@@ -132,6 +132,9 @@ MonoBehaviour:
   ballParticles: {fileID: 7136874536191162214, guid: 1ad24e9ad0b12d946a4ce680cf40b8bc, type: 3}
   collision1: {fileID: 8300000, guid: e8266633bf594074a908d39751ec1d78, type: 3}
   collision2: {fileID: 8300000, guid: 869a27e425bfc844dbdaae715dfd082b, type: 3}
+  scoreSound2: {fileID: 8300000, guid: 310b74a7ee86ee44e9596a9836cfbd14, type: 3}
+  scoreSound3: {fileID: 8300000, guid: e8573432b5fc01d4fa5e883e0fb5877b, type: 3}
+  scoreSound4: {fileID: 8300000, guid: 48717f0112c9ebe47b7c894520671e93, type: 3}
   score: {fileID: 8300000, guid: 64fcfa317cdde3b4bbbdbcca6999372d, type: 3}
 --- !u!96 &7428814871793079729
 TrailRenderer:
