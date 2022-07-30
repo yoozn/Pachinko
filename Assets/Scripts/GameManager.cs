@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] public int ballsLeft;
     [SerializeField] TextMeshProUGUI ballsLeftText;
+    public int startingBalls;
     public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
+        startingBalls = ballsLeft;
         UpdateScore(0);
         UpdateBalls(0);
     }

@@ -12,9 +12,12 @@ public class Ball : MonoBehaviour
     [SerializeField] AudioClip score;
     private AudioSource audioSource;
     private bool scored = false;
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         Color randomColor = RandomColourVector3();
 
         //scale of ball. un comment below to set to random values.
@@ -64,6 +67,7 @@ public class Ball : MonoBehaviour
             other.GetComponent<ScoreCollider>().scoreUpdate(1);
             audioSource.PlayOneShot(score);
             scored = true;
+            gameManager.startingBalls -= 1;
         }
     }
 
@@ -73,6 +77,7 @@ public class Ball : MonoBehaviour
         {
             other.GetComponent<ScoreCollider>().scoreUpdate(-1);
             scored = false;
+            gameManager.startingBalls += 1;
         }
     }
 
