@@ -952,6 +952,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2399,6 +2403,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2919,6 +2927,7 @@ MonoBehaviour:
   scoreText: {fileID: 1930272376}
   ballsLeft: 5
   ballsLeftText: {fileID: 1198859713}
+  startingBalls: 0
   score: 0
 --- !u!4 &709874998
 Transform:
@@ -3635,6 +3644,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: -0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4831,6 +4844,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: -0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5275,6 +5292,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -6749,6 +6770,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7777,6 +7802,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8970,6 +8999,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9488,6 +9521,10 @@ PrefabInstance:
       propertyPath: colorValue.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1776834994396526148, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
+      propertyPath: scoreColliderParticle1
+      value: 
+      objectReference: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
     - target: {fileID: 1839810422849643102, guid: a4e32bc767a49794faed76658f6d5ea1, type: 3}
       propertyPath: m_RootOrder
       value: 0

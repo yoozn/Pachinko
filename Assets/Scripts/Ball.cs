@@ -65,6 +65,7 @@ public class Ball : MonoBehaviour
         if (other.gameObject.CompareTag("CollisionScore"))
         {
             other.GetComponent<ScoreCollider>().scoreUpdate(1);
+            other.GetComponent<ScoreCollider>().ScoreParticles();
             audioSource.PlayOneShot(score);
             scored = true;
             gameManager.startingBalls -= 1;

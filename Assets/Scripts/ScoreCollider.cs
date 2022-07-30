@@ -10,9 +10,12 @@ public class ScoreCollider : MonoBehaviour
     private Renderer colourRenderer;
     [SerializeField] Vector4 colorValue;
     private GameManager gameManager;
+    [SerializeField] ParticleSystem scoreColliderParticle1;
     // Start is called before the first frame update
     void Start()
     {
+        var main = scoreColliderParticle1.main;
+        main.startColor = new Color(colorValue.x, colorValue.y, colorValue.z);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         colourRenderer = GetComponent<Renderer>();
         valueText.text = value.ToString();
@@ -29,4 +32,9 @@ public class ScoreCollider : MonoBehaviour
         gameManager.UpdateScore(value * num);
         Debug.Log(value);
     }
+
+    public void ScoreParticles()
+    {
+        Instantiate(scoreColliderParticle1, transform.position, scoreColliderParticle1.transform.rotation);
+    }    
 }

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ballparticle : MonoBehaviour
 {
+    [SerializeField] int destroyTime;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("destroyParticle", 2);
+        Invoke("destroyParticle", destroyTime);
     }
 
     // Update is called once per frame
