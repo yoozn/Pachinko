@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    //ADD RECORDS TO EACH LEVEL
+    //MAKE SANDBOX LEVEL LEVEL 3,
+    //make all levels into sandbox levels
     [SerializeField] private GameObject ball;
     [SerializeField] private Camera cam;
     [SerializeField] Vector2 mousePos;
@@ -58,5 +62,15 @@ public class GameManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ToLevel1()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void ToLevel2()
+    {
+        SceneManager.LoadScene(3);
     }
 }
