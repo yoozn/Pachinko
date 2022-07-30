@@ -29,9 +29,9 @@ public class ScoreCollider : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         colourRenderer = GetComponent<Renderer>();
         valueText.text = value.ToString();
-        Invoke("ScoreParticles", 5);
+        //Invoke("ScoreParticles", 5);
         colourRenderer.material.color = colourValue;
-        Debug.Log(colourRenderer.material.color);
+        //Debug.Log(colourRenderer.material.color);
     }
 
     // Update is called once per frame
