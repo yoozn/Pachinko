@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
     public void ChangeToMain()
     {
         SceneManager.LoadScene(1);
-        SaveAndLoad.instance.Save()
+        SaveAndLoad.instance.Save();
     }
 
     public void ChangeToLevel1()
