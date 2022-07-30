@@ -113,7 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 0
   valueText: {fileID: 0}
-  colorValue: {x: 0, y: 0, z: 0}
+  colorValue: {x: 0, y: 0, z: 0, w: 0}
+  scoreColliderParticle1: {fileID: 5820227123737490600, guid: 710846c1cf2a75a4fad15562bd7f7583, type: 3}
 --- !u!1 &4660970116870389410
 GameObject:
   m_ObjectHideFlags: 0

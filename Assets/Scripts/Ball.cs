@@ -56,7 +56,7 @@ public class Ball : MonoBehaviour
 
     Color RandomColourVector3()
     {
-        Color randColour = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 255));
+        Color randColour = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
         return randColour;
     }
 
@@ -104,4 +104,5 @@ public class Ball : MonoBehaviour
         }
         
     }
+
 }
