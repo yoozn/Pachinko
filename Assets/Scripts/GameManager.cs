@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] Vector2 mousePos;
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] int ballsLeft;
+    [SerializeField] public int ballsLeft;
     [SerializeField] TextMeshProUGUI ballsLeftText;
     public int score = 0;
     // Start is called before the first frame update
@@ -62,15 +62,18 @@ public class GameManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+        SaveAndLoad.instance.Save();
     }
 
     public void ToLevel1()
     {
         SceneManager.LoadScene(2);
+        SaveAndLoad.instance.Save();
     }
 
     public void ToLevel2()
     {
         SceneManager.LoadScene(3);
+        SaveAndLoad.instance.Save();
     }
 }

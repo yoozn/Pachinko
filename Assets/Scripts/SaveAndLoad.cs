@@ -6,25 +6,26 @@ using System.IO;
 public class SaveAndLoad : MonoBehaviour
 {
     public static SaveAndLoad instance;
-    private int highScore1_1;
-    private int highScore1_2;
-    private int highScore1_3;
-    private int highScore2_1;
-    private int highScore2_2;
-    private int highScore2_3;
-    private int highScore3_1;
-    private int highScore3_2;
-    private int highScore3_3;
-    private string newName;
-    private string name1_1;
-    private string name1_2;
-    private string name1_3;
-    private string name2_1;
-    private string name2_2;
-    private string name2_3;
-    private string name3_1;
-    private string name3_2;
-    private string name3_3;
+    public int highScore1_1;
+    public int highScore1_2;
+    public int highScore1_3;
+    public int highScore2_1;
+    public int highScore2_2;
+    public int highScore2_3;
+    public int highScore3_1;
+    public int highScore3_2;
+    public int highScore3_3;
+    public string newName;
+    public string name1_1;
+    public string name1_2;
+    public string name1_3;
+    public string name2_1;
+    public string name2_2;
+    public string name2_3;
+    public string name3_1;
+    public string name3_2;
+    public string name3_3;
+
 
     // Start is called before the first frame update
     void Start()
