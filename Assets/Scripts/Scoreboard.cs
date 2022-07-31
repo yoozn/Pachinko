@@ -259,8 +259,9 @@ public class Scoreboard : MonoBehaviour
 
                     SaveAndLoad.instance.name1_3 = SaveAndLoad.instance.newName;
                 }
-            // Same thing as above, but for the next level
-            } else if (levelNum == 2)
+                // Same thing as above, but for the next level
+            }
+            else if (levelNum == 2)
             {
                 if (gameManager.score > SaveAndLoad.instance.highScore2_1)
                 {
@@ -285,6 +286,33 @@ public class Scoreboard : MonoBehaviour
                     SaveAndLoad.instance.highScore2_3 = gameManager.score;
 
                     SaveAndLoad.instance.name2_3 = SaveAndLoad.instance.newName;
+                }
+            }
+            else if (levelNum == 3)
+            {
+                if (gameManager.score > SaveAndLoad.instance.highScore3_1)
+                {
+                    SaveAndLoad.instance.highScore3_3 = SaveAndLoad.instance.highScore3_2;
+                    SaveAndLoad.instance.highScore3_2 = SaveAndLoad.instance.highScore3_1;
+                    SaveAndLoad.instance.highScore3_1 = gameManager.score;
+
+                    SaveAndLoad.instance.name3_3 = SaveAndLoad.instance.name3_2;
+                    SaveAndLoad.instance.name3_2 = SaveAndLoad.instance.name3_1;
+                    SaveAndLoad.instance.name3_1 = SaveAndLoad.instance.newName;
+                }
+                else if (gameManager.score > SaveAndLoad.instance.highScore3_2)
+                {
+                    SaveAndLoad.instance.highScore3_3 = SaveAndLoad.instance.highScore3_2;
+                    SaveAndLoad.instance.highScore3_2 = gameManager.score;
+
+                    SaveAndLoad.instance.name3_3 = SaveAndLoad.instance.name3_2;
+                    SaveAndLoad.instance.name3_2 = SaveAndLoad.instance.newName;
+                }
+                else if (gameManager.score > SaveAndLoad.instance.highScore3_3)
+                {
+                    SaveAndLoad.instance.highScore3_3 = gameManager.score;
+
+                    SaveAndLoad.instance.name3_3 = SaveAndLoad.instance.newName;
                 }
             }
         }

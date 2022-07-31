@@ -78,4 +78,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(3);
         SaveAndLoad.instance.Save();
     }
+
+    public void ToLevel3()
+    {
+        SceneManager.LoadScene(4);
+        SaveAndLoad.instance.Save();
+    }
 }
