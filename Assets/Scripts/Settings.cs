@@ -7,6 +7,7 @@ public class Settings : MonoBehaviour
 {
     private bool isSettings = false;
     [SerializeField] Slider volumeSlider;
+    [SerializeField] Slider gameSlider;
 
     //public static Settings instance;
 
@@ -14,6 +15,7 @@ public class Settings : MonoBehaviour
     void Start()
     {
         volumeSlider.value = SaveAndLoad.instance.volume;
+        gameSlider.value = SaveAndLoad.instance.gameVolume;
 
         //gameObject.SetActive(false);
         //if (instance != null)
@@ -45,6 +47,12 @@ public class Settings : MonoBehaviour
     {
         SaveAndLoad.instance.volume = volume;
         SaveAndLoad.instance.musicSource.volume = volume / 1.5f;
+        SaveAndLoad.instance.Save();
+    }
+
+    public void OnGameVolumeChanged(float volume)
+    {
+        SaveAndLoad.instance.gameVolume = volume;
         SaveAndLoad.instance.Save();
     }
 }

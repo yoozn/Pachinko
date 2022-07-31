@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
 
         //ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);
         ballRb.AddForce(Vector3.down, ForceMode.Impulse);
-
+        audioSource.volume = SaveAndLoad.instance.gameVolume / 5;
 
         //var main = ballParticles.main;
         //main.startColor = randomColor;
