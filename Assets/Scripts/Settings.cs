@@ -21,7 +21,9 @@ public class Settings : MonoBehaviour
         gameSlider.value = SaveAndLoad.instance.gameVolume;
         bouncyness.value = SaveAndLoad.instance.bouncyness;
         randomForce.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomForce;
+        //randomForce.GetComponent<Toggle>().isOn = true;
         randomSize.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomSize;
+        //randomSize.GetComponent<Toggle>().isOn = true;
 
 
         //gameObject.SetActive(false);
@@ -69,16 +71,16 @@ public class Settings : MonoBehaviour
         SaveAndLoad.instance.Save();
     }
 
-    public void IsRandomForce()
+    public void IsRandomForce(bool isChecked)
     {
-        SaveAndLoad.instance.isRandomForce = !SaveAndLoad.instance.isRandomForce;
+        SaveAndLoad.instance.isRandomForce = isChecked;
         SaveAndLoad.instance.Save();
         Debug.Log(SaveAndLoad.instance.isRandomForce);
     }
 
-    public void IsRandomSize()
+    public void IsRandomSize(bool isChecked)
     {
-        SaveAndLoad.instance.isRandomSize = !SaveAndLoad.instance.isRandomSize;
+        SaveAndLoad.instance.isRandomSize = isChecked;
         SaveAndLoad.instance.Save();
         Debug.Log(SaveAndLoad.instance.isRandomSize);
     }

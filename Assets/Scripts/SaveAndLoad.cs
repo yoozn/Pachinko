@@ -65,7 +65,7 @@ public class SaveAndLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(isRandomForce +" " + isRandomSize);
+        Debug.Log(isRandomForce +" " + isRandomSize);
     }
 
     class SaveData
