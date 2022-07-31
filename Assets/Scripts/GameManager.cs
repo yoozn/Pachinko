@@ -84,4 +84,19 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(4);
         SaveAndLoad.instance.Save();
     }
+
+    public void ToLevel1sandbox()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void ToLevel2sandbox()
+    {
+        SceneManager.LoadScene(6);
+    }
+
+    public void ToLevel3sandbox()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

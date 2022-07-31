@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour
     //Switches scenes from main menu to pachinko main scene. Used from button on main menu
     public void ChangeToMain()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
         SaveAndLoad.instance.Save();
     }
 
