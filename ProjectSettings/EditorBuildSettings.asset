@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level2sandbox.unity
     guid: 7daca1c871d493f4e8180ec66f633ec5
+  - enabled: 1
+    path: Assets/Scenes/RandomGenScene.unity
+    guid: 6a2df41339a63d44e9f18cd4b3e402ef
   m_configObjects: {}

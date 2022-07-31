@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            ResetScene();
         }
     }
 
@@ -98,5 +98,15 @@ public class GameManager : MonoBehaviour
     public void ToLevel3sandbox()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ToRandomGenScene()
+    {
+        SceneManager.LoadScene(7);
     }
 }
