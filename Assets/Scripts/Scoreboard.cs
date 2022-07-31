@@ -14,6 +14,9 @@ public class Scoreboard : MonoBehaviour
     private int highScore3_1;
     private int highScore3_2;
     private int highScore3_3;
+    private int highScore4_1;
+    private int highScore4_2;
+    private int highScore4_3;
     private string newName;
     private string name1_1;
     private string name1_2;
@@ -24,6 +27,9 @@ public class Scoreboard : MonoBehaviour
     private string name3_1;
     private string name3_2;
     private string name3_3;
+    private string name4_1;
+    private string name4_2;
+    private string name4_3;
     [SerializeField] int levelNum;
     [SerializeField] TextMeshProUGUI record1;
     [SerializeField] TextMeshProUGUI record2;
@@ -77,8 +83,22 @@ public class Scoreboard : MonoBehaviour
             record2.text = "2. " + name3_2 + ": " + highScore3_2;
             record3.text = "3. " + name3_3 + ": " + highScore3_3;
         }
+        else if (levelNum == 4)
+        {
+            highScore4_1 = SaveAndLoad.instance.highScore4_1;
+            highScore4_2 = SaveAndLoad.instance.highScore4_2;
+            highScore4_3 = SaveAndLoad.instance.highScore4_3;
 
-        
+            name4_1 = SaveAndLoad.instance.name4_1;
+            name4_2 = SaveAndLoad.instance.name4_2;
+            name4_3 = SaveAndLoad.instance.name4_3;
+
+            record1.text = "1. " + name4_1 + ": " + highScore4_1;
+            record2.text = "2. " + name4_2 + ": " + highScore4_2;
+            record3.text = "3. " + name4_3 + ": " + highScore4_3;
+        }
+
+
     }
 
     // Update is called once per frame
@@ -313,6 +333,33 @@ public class Scoreboard : MonoBehaviour
                     SaveAndLoad.instance.highScore3_3 = gameManager.score;
 
                     SaveAndLoad.instance.name3_3 = SaveAndLoad.instance.newName;
+                }
+            }
+            else if (levelNum == 4)
+            {
+                if (gameManager.score > SaveAndLoad.instance.highScore4_1)
+                {
+                    SaveAndLoad.instance.highScore4_3 = SaveAndLoad.instance.highScore4_2;
+                    SaveAndLoad.instance.highScore4_2 = SaveAndLoad.instance.highScore4_1;
+                    SaveAndLoad.instance.highScore4_1 = gameManager.score;
+
+                    SaveAndLoad.instance.name4_3 = SaveAndLoad.instance.name4_2;
+                    SaveAndLoad.instance.name4_2 = SaveAndLoad.instance.name4_1;
+                    SaveAndLoad.instance.name4_1 = SaveAndLoad.instance.newName;
+                }
+                else if (gameManager.score > SaveAndLoad.instance.highScore4_2)
+                {
+                    SaveAndLoad.instance.highScore4_3 = SaveAndLoad.instance.highScore4_2;
+                    SaveAndLoad.instance.highScore4_2 = gameManager.score;
+
+                    SaveAndLoad.instance.name4_3 = SaveAndLoad.instance.name4_2;
+                    SaveAndLoad.instance.name4_2 = SaveAndLoad.instance.newName;
+                }
+                else if (gameManager.score > SaveAndLoad.instance.highScore4_3)
+                {
+                    SaveAndLoad.instance.highScore4_3 = gameManager.score;
+
+                    SaveAndLoad.instance.name4_3 = SaveAndLoad.instance.newName;
                 }
             }
         }

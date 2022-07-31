@@ -30,6 +30,9 @@ public class SaveAndLoad : MonoBehaviour
     public int highScore3_1;
     public int highScore3_2;
     public int highScore3_3;
+    public int highScore4_1;
+    public int highScore4_2;
+    public int highScore4_3;
     public string newName;
     public string name1_1;
     public string name1_2;
@@ -40,6 +43,9 @@ public class SaveAndLoad : MonoBehaviour
     public string name3_1;
     public string name3_2;
     public string name3_3;
+    public string name4_1;
+    public string name4_2;
+    public string name4_3;
 
 
     // Start is called before the first frame update
@@ -82,6 +88,9 @@ public class SaveAndLoad : MonoBehaviour
         public int highScore3_1;
         public int highScore3_2;
         public int highScore3_3;
+        public int highScore4_1;
+        public int highScore4_2;
+        public int highScore4_3;
         public string newName;
         public string name1_1;
         public string name1_2;
@@ -92,6 +101,9 @@ public class SaveAndLoad : MonoBehaviour
         public string name3_1;
         public string name3_2;
         public string name3_3;
+        public string name4_1;
+        public string name4_2;
+        public string name4_3;
 
         public float volume;
         public float gameVolume;
@@ -115,6 +127,9 @@ public class SaveAndLoad : MonoBehaviour
         data.highScore3_1 = highScore3_1; 
         data.highScore3_2 = highScore3_2; 
         data.highScore3_3 = highScore3_3;
+        data.highScore4_1 = highScore4_1;
+        data.highScore4_2 = highScore4_2;
+        data.highScore4_3 = highScore4_3;
         data.newName = newName;
         data.name1_1 = name1_1;
         data.name1_2 = name1_2;
@@ -125,6 +140,9 @@ public class SaveAndLoad : MonoBehaviour
         data.name3_1 = name3_1;
         data.name3_2 = name3_2;
         data.name3_3 = name3_3;
+        data.name4_1 = name4_1;
+        data.name4_2 = name4_2;
+        data.name4_3 = name4_3;
 
         data.volume = volume;
         data.gameVolume = gameVolume;
@@ -159,6 +177,9 @@ public class SaveAndLoad : MonoBehaviour
             highScore3_1 = data.highScore3_1;
             highScore3_2 = data.highScore3_2;
             highScore3_3 = data.highScore3_3;
+            highScore4_1 = data.highScore4_1;
+            highScore4_2 = data.highScore4_2;
+            highScore4_3 = data.highScore4_3;
             newName = data.newName;
             name1_1 = data.name1_1;
             name1_2 = data.name1_2;
@@ -169,6 +190,9 @@ public class SaveAndLoad : MonoBehaviour
             name3_1 = data.name3_1;
             name3_2 = data.name3_2;
             name3_3 = data.name3_3;
+            name3_1 = data.name4_1;
+            name3_2 = data.name4_2;
+            name3_3 = data.name4_3;
 
             volume = data.volume;
             gameVolume = data.gameVolume;

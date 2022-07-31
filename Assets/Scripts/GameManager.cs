@@ -103,10 +103,16 @@ public class GameManager : MonoBehaviour
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SaveAndLoad.instance.Save();
     }
 
     public void ToRandomGenScene()
     {
         SceneManager.LoadScene(7);
+    }
+
+    public void ToLevel4()
+    {
+        SceneManager.LoadScene(8);
     }
 }

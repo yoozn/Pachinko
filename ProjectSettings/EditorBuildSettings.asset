@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RandomGenScene.unity
     guid: 6a2df41339a63d44e9f18cd4b3e402ef
+  - enabled: 1
+    path: Assets/Scenes/level4Random.unity
+    guid: 2de6ae8477332c649913155122080617
   m_configObjects: {}
