@@ -22,6 +22,8 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = SaveAndLoad.instance.timeScale;
+
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         ballPhysMat = GetComponent<Collider>().material;
         ballPhysMat.bounciness = SaveAndLoad.instance.bouncyness;

@@ -11,15 +11,18 @@ public class Settings : MonoBehaviour
     [SerializeField] Slider bouncyness;
     [SerializeField] Toggle randomForce;
     [SerializeField] Toggle randomSize;
+    [SerializeField] Slider timeSlider;
 
     //public static Settings instance;
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Settings opened");
         volumeSlider.value = SaveAndLoad.instance.volume;
         gameSlider.value = SaveAndLoad.instance.gameVolume;
         bouncyness.value = SaveAndLoad.instance.bouncyness;
+        timeSlider.value = SaveAndLoad.instance.timeScale;
         randomForce.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomForce;
         //randomForce.GetComponent<Toggle>().isOn = true;
         randomSize.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomSize;
@@ -83,5 +86,11 @@ public class Settings : MonoBehaviour
         SaveAndLoad.instance.isRandomSize = isChecked;
         SaveAndLoad.instance.Save();
         Debug.Log(SaveAndLoad.instance.isRandomSize);
+    }
+
+    public void OnTimeScaleChanged(float timeChanged)
+    {
+        SaveAndLoad.instance.timeScale = timeChanged;
+        SaveAndLoad.instance.Save();
     }
 }

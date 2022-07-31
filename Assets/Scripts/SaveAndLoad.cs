@@ -9,13 +9,14 @@ public class SaveAndLoad : MonoBehaviour
     public static SaveAndLoad instance;
 
     public AudioSource musicSource;
-    public float volume;
-    public float gameVolume;
+    public float volume = .6f;
+    public float gameVolume = .3f;
+    public float timeScale;
 
-    public float bouncyness;
+    public float bouncyness = .5f;
 
-    public bool isRandomForce;
-    public bool isRandomSize;
+    public bool isRandomForce = false;
+    public bool isRandomSize = false;
     //private bool isSettings = false;
     //[SerializeField] GameObject settings;
 
@@ -51,6 +52,7 @@ public class SaveAndLoad : MonoBehaviour
         }
 
         Load();
+        //Save();
         //if (SceneManager.GetActiveScene().buildIndex == 0)
         //{
         //    settings = GameObject.Find("SettingsCanvas");
@@ -65,7 +67,7 @@ public class SaveAndLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(isRandomForce +" " + isRandomSize);
+        //Debug.Log(isRandomForce +" " + isRandomSize);
     }
 
     class SaveData
@@ -96,6 +98,7 @@ public class SaveAndLoad : MonoBehaviour
         public float bouncyness;
         public bool isRandomForce;
         public bool isRandomSize;
+        public float timeScale;
     }
 
     public void Save()
@@ -127,6 +130,7 @@ public class SaveAndLoad : MonoBehaviour
         data.bouncyness = bouncyness;
         data.isRandomForce = isRandomForce;
         data.isRandomSize = isRandomSize;
+        data.timeScale = timeScale;
 
         string json = JsonUtility.ToJson(data);
 
@@ -139,6 +143,7 @@ public class SaveAndLoad : MonoBehaviour
 
         if (File.Exists(path))
         {
+            Debug.Log("Exists");
             string json = File.ReadAllText(path);
             SaveData data = JsonUtility.FromJson<SaveData>(json);
 
@@ -168,6 +173,7 @@ public class SaveAndLoad : MonoBehaviour
             bouncyness = data.bouncyness;
             isRandomForce = data.isRandomForce;
             isRandomSize = data.isRandomSize;
+            timeScale = data.timeScale;
         }
     }
 
