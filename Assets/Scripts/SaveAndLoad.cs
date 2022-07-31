@@ -13,6 +13,9 @@ public class SaveAndLoad : MonoBehaviour
     public float gameVolume;
 
     public float bouncyness;
+
+    public bool isRandomForce;
+    public bool isRandomSize;
     //private bool isSettings = false;
     //[SerializeField] GameObject settings;
 
@@ -62,7 +65,7 @@ public class SaveAndLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(volume);
+        //Debug.Log(isRandomForce +" " + isRandomSize);
     }
 
     class SaveData
@@ -91,6 +94,8 @@ public class SaveAndLoad : MonoBehaviour
         public float gameVolume;
 
         public float bouncyness;
+        public bool isRandomForce;
+        public bool isRandomSize;
     }
 
     public void Save()
@@ -120,6 +125,8 @@ public class SaveAndLoad : MonoBehaviour
         data.gameVolume = gameVolume;
 
         data.bouncyness = bouncyness;
+        data.isRandomForce = isRandomForce;
+        data.isRandomSize = isRandomSize;
 
         string json = JsonUtility.ToJson(data);
 
@@ -159,6 +166,8 @@ public class SaveAndLoad : MonoBehaviour
             gameVolume = data.gameVolume;
 
             bouncyness = data.bouncyness;
+            isRandomForce = data.isRandomForce;
+            isRandomSize = data.isRandomSize;
         }
     }
 

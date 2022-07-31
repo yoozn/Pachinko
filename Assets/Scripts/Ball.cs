@@ -18,6 +18,7 @@ public class Ball : MonoBehaviour
     private GameManager gameManager;
     private Color randomColor;
     private PhysicMaterial ballPhysMat;
+    private float scaleBall;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,17 @@ public class Ball : MonoBehaviour
 
         randomColor = RandomColourVector3();
 
+        if (SaveAndLoad.instance.isRandomSize == true)
+        {
+            scaleBall = Random.Range(.2f, .35f);
+        } else
+        {
+            scaleBall = .25f;
+        }
+
         //scale of ball. un comment below to set to random values.
 
-        //float scaleBall = Random.Range(.2f, .35f);
-        float scaleBall = .25f;
+
 
 
         transform.localScale = new Vector3(scaleBall, scaleBall, scaleBall);
@@ -40,9 +48,15 @@ public class Ball : MonoBehaviour
 
         ballRenderer.material.color = randomColor;
 
+        if (SaveAndLoad.instance.isRandomForce == true)
+        {
+            ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);
+        } else
+        {
+            ballRb.AddForce(Vector3.down, ForceMode.Impulse);
+        }
 
-        //ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);
-        ballRb.AddForce(Vector3.down, ForceMode.Impulse);
+
         audioSource.volume = SaveAndLoad.instance.gameVolume / 5;
 
         //var main = ballParticles.main;

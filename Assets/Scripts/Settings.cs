@@ -9,6 +9,8 @@ public class Settings : MonoBehaviour
     [SerializeField] Slider volumeSlider;
     [SerializeField] Slider gameSlider;
     [SerializeField] Slider bouncyness;
+    [SerializeField] Toggle randomForce;
+    [SerializeField] Toggle randomSize;
 
     //public static Settings instance;
 
@@ -18,6 +20,9 @@ public class Settings : MonoBehaviour
         volumeSlider.value = SaveAndLoad.instance.volume;
         gameSlider.value = SaveAndLoad.instance.gameVolume;
         bouncyness.value = SaveAndLoad.instance.bouncyness;
+        randomForce.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomForce;
+        randomSize.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomSize;
+
 
         //gameObject.SetActive(false);
         //if (instance != null)
@@ -62,5 +67,19 @@ public class Settings : MonoBehaviour
     {
         SaveAndLoad.instance.bouncyness = bouncyChange;
         SaveAndLoad.instance.Save();
+    }
+
+    public void IsRandomForce()
+    {
+        SaveAndLoad.instance.isRandomForce = !SaveAndLoad.instance.isRandomForce;
+        SaveAndLoad.instance.Save();
+        Debug.Log(SaveAndLoad.instance.isRandomForce);
+    }
+
+    public void IsRandomSize()
+    {
+        SaveAndLoad.instance.isRandomSize = !SaveAndLoad.instance.isRandomSize;
+        SaveAndLoad.instance.Save();
+        Debug.Log(SaveAndLoad.instance.isRandomSize);
     }
 }
