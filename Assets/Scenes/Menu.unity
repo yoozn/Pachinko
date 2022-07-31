@@ -2052,22 +2052,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1093726687427610235, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687427610235, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687602269962, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687602269962, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1093726687767538970, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
@@ -2154,70 +2138,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1093726687767539174, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687843744901, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687843744901, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687883597994, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687883597994, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687976396295, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687976396295, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726687976396295, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688161741827, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688161741827, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688161741827, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688812324986, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688812324986, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688812324986, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688960650889, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688960650889, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093726688960650889, guid: c5c13ec930aefc64e9bb9fc2ac4b77a7, type: 3}
-      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

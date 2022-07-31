@@ -16,11 +16,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] public int ballsLeft;
     [SerializeField] TextMeshProUGUI ballsLeftText;
+    private GameObject highlightZone;
+    private float spawnXZoneMin;
+    private float spawnXZoneMax;
+    private float spawnYZoneMin;
+    private float spawnYZoneMax;
     public int startingBalls;
     public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
+        highlightZone = GameObject.Find("HighlightZone");
+        spawnYZoneMin = 4f;
+        spawnYZoneMax = 4.9f;
+        spawnXZoneMax = 4.5f;
+        spawnXZoneMin = -4.45f;
         startingBalls = ballsLeft;
         UpdateScore(0);
         UpdateBalls(0);
@@ -31,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
          mousePos = Input.mousePosition;
         Vector3 worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 9));
-        if (mousePos.x > 520 && mousePos.x < 1400 && mousePos.y > 800)
+        if (worldPos.x > spawnXZoneMin && worldPos.x < spawnXZoneMax && worldPos.y > spawnYZoneMin && worldPos.y < spawnYZoneMax)
         {
             if (Input.GetMouseButtonDown(0) && ballsLeft >= 1)
             {
