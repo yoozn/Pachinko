@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class SaveAndLoad : MonoBehaviour
 {
     public static SaveAndLoad instance;
+
+    public AudioSource musicSource;
+    public float volume;
+    //private bool isSettings = false;
+    //[SerializeField] GameObject settings;
+
     public int highScore1_1;
     public int highScore1_2;
     public int highScore1_3;
@@ -30,12 +37,21 @@ public class SaveAndLoad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if (instance != null)
         {
             Destroy(gameObject);
             return;
         }
 
+        Load();
+        //if (SceneManager.GetActiveScene().buildIndex == 0)
+        //{
+        //    settings = GameObject.Find("SettingsCanvas");
+        //}
+
+        musicSource = GetComponent<AudioSource>();
+        musicSource.volume = volume / 1.25f;
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -43,7 +59,7 @@ public class SaveAndLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(volume);
     }
 
     class SaveData
@@ -67,6 +83,8 @@ public class SaveAndLoad : MonoBehaviour
         public string name3_1;
         public string name3_2;
         public string name3_3;
+
+        public float volume;
     }
 
     public void Save()
@@ -91,6 +109,8 @@ public class SaveAndLoad : MonoBehaviour
         data.name3_1 = name3_1;
         data.name3_2 = name3_2;
         data.name3_3 = name3_3;
+
+        data.volume = volume;
 
         string json = JsonUtility.ToJson(data);
 
@@ -125,7 +145,19 @@ public class SaveAndLoad : MonoBehaviour
             name3_1 = data.name3_1;
             name3_2 = data.name3_2;
             name3_3 = data.name3_3;
+
+            volume = data.volume;
         }
     }
+
+    //public void OnVolumeChanged(float newVolume)
+    //{
+    //    volume = newVolume;
+    //    musicSource.volume = volume / 2;
+    //    Debug.Log(newVolume);
+    //}
+
+    
+
 
 }
