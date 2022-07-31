@@ -50,6 +50,13 @@ public class Ball : MonoBehaviour
 
         ballRenderer.material.color = randomColor;
 
+        if (!SaveAndLoad.instance.isShiny)
+        {
+            ballRenderer.material.SetFloat("_Metallic", 0);
+            ballRenderer.material.SetFloat("_Glossiness", .5f);
+        }
+        
+
         if (SaveAndLoad.instance.isRandomForce == true)
         {
             ballRb.AddForce(RandomForceVector(), ForceMode.Impulse);

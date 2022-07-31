@@ -12,6 +12,7 @@ public class Settings : MonoBehaviour
     [SerializeField] Toggle randomForce;
     [SerializeField] Toggle randomSize;
     [SerializeField] Slider timeSlider;
+    [SerializeField] Toggle shinyBalls;
 
     //public static Settings instance;
 
@@ -24,6 +25,7 @@ public class Settings : MonoBehaviour
         bouncyness.value = SaveAndLoad.instance.bouncyness;
         timeSlider.value = SaveAndLoad.instance.timeScale;
         randomForce.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomForce;
+        shinyBalls.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isShiny;
         //randomForce.GetComponent<Toggle>().isOn = true;
         randomSize.GetComponent<Toggle>().isOn = SaveAndLoad.instance.isRandomSize;
         //randomSize.GetComponent<Toggle>().isOn = true;
@@ -91,6 +93,12 @@ public class Settings : MonoBehaviour
     public void OnTimeScaleChanged(float timeChanged)
     {
         SaveAndLoad.instance.timeScale = timeChanged;
+        SaveAndLoad.instance.Save();
+    }
+
+    public void IsShiny(bool isTicked)
+    {
+        SaveAndLoad.instance.isShiny = isTicked;
         SaveAndLoad.instance.Save();
     }
 }

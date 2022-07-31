@@ -17,6 +17,7 @@ public class SaveAndLoad : MonoBehaviour
 
     public bool isRandomForce = false;
     public bool isRandomSize = false;
+    public bool isShiny;
     //private bool isSettings = false;
     //[SerializeField] GameObject settings;
 
@@ -99,6 +100,7 @@ public class SaveAndLoad : MonoBehaviour
         public bool isRandomForce;
         public bool isRandomSize;
         public float timeScale;
+        public bool isShiny;
     }
 
     public void Save()
@@ -131,6 +133,7 @@ public class SaveAndLoad : MonoBehaviour
         data.isRandomForce = isRandomForce;
         data.isRandomSize = isRandomSize;
         data.timeScale = timeScale;
+        data.isShiny = isShiny;
 
         string json = JsonUtility.ToJson(data);
 
@@ -174,6 +177,7 @@ public class SaveAndLoad : MonoBehaviour
             isRandomForce = data.isRandomForce;
             isRandomSize = data.isRandomSize;
             timeScale = data.timeScale;
+            isShiny = data.isShiny;
         }
     }
 
