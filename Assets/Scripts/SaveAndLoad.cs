@@ -11,6 +11,8 @@ public class SaveAndLoad : MonoBehaviour
     public AudioSource musicSource;
     public float volume;
     public float gameVolume;
+
+    public float bouncyness;
     //private bool isSettings = false;
     //[SerializeField] GameObject settings;
 
@@ -87,6 +89,8 @@ public class SaveAndLoad : MonoBehaviour
 
         public float volume;
         public float gameVolume;
+
+        public float bouncyness;
     }
 
     public void Save()
@@ -114,6 +118,8 @@ public class SaveAndLoad : MonoBehaviour
 
         data.volume = volume;
         data.gameVolume = gameVolume;
+
+        data.bouncyness = bouncyness;
 
         string json = JsonUtility.ToJson(data);
 
@@ -151,6 +157,8 @@ public class SaveAndLoad : MonoBehaviour
 
             volume = data.volume;
             gameVolume = data.gameVolume;
+
+            bouncyness = data.bouncyness;
         }
     }
 

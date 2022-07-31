@@ -25,7 +25,7 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(5);
         SaveAndLoad.instance.Save();
-    }
+    }   
 
     public void ChangeToLevel1()
     {
@@ -37,4 +37,6 @@ public class Menu : MonoBehaviour
         SaveAndLoad.instance.newName = name;
         SaveAndLoad.instance.Save();
     }
+
+    
 }

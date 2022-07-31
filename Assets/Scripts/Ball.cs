@@ -17,10 +17,13 @@ public class Ball : MonoBehaviour
     private bool scored = false;
     private GameManager gameManager;
     private Color randomColor;
+    private PhysicMaterial ballPhysMat;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        ballPhysMat = GetComponent<Collider>().material;
+        ballPhysMat.bounciness = SaveAndLoad.instance.bouncyness;
 
         randomColor = RandomColourVector3();
 

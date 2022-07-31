@@ -8,6 +8,7 @@ public class Settings : MonoBehaviour
     private bool isSettings = false;
     [SerializeField] Slider volumeSlider;
     [SerializeField] Slider gameSlider;
+    [SerializeField] Slider bouncyness;
 
     //public static Settings instance;
 
@@ -16,6 +17,7 @@ public class Settings : MonoBehaviour
     {
         volumeSlider.value = SaveAndLoad.instance.volume;
         gameSlider.value = SaveAndLoad.instance.gameVolume;
+        bouncyness.value = SaveAndLoad.instance.bouncyness;
 
         //gameObject.SetActive(false);
         //if (instance != null)
@@ -31,7 +33,7 @@ public class Settings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ToggleSettings()
@@ -53,6 +55,12 @@ public class Settings : MonoBehaviour
     public void OnGameVolumeChanged(float volume)
     {
         SaveAndLoad.instance.gameVolume = volume;
+        SaveAndLoad.instance.Save();
+    }
+
+    public void OnBouncynessChanged(float bouncyChange)
+    {
+        SaveAndLoad.instance.bouncyness = bouncyChange;
         SaveAndLoad.instance.Save();
     }
 }
